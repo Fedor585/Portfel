@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Crypto Portfolio",
+    "slug": "rn-starter-app",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "android": { "package": "com.yourname.rnstarterapp" }
+  }
+}
