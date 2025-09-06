@@ -5,10 +5,14 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
+
+    "icon": "./assets/file_000000008b786243bb61d4b801b3b683.png",
+
     "splash": {
       "backgroundColor": "#ffffff",
       "resizeMode": "contain"
     },
+
     "android": {
       "package": "com.fedor585.portfel",
       "versionCode": 1,
@@ -17,14 +21,18 @@
         "resizeMode": "contain"
       },
       "adaptiveIcon": {
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/file_000000008b786243bb61d4b801b3b683.png",
+        "backgroundColor": "#000000"
       }
     },
+
     "extra": {
       "eas": {
         "projectId": "19777560-2a1d-4fdb-afe3-10ea544250df"
       }
     },
+
+    "sdkVersion": "51.0.0",
     "platforms": ["android"]
   }
 }
