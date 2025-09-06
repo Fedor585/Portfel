@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Portfel",
+    "slug": "portfel",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#ffffff",
+      "resizeMode": "contain"
+    },
+    "android": {
+      "package": "com.fedor585.portfel",
+      "versionCode": 1,
+      "splash": {
+        "backgroundColor": "#ffffff",
+        "resizeMode": "contain"
+      },
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "19777560-2a1d-4fdb-afe3-10ea544250df"
+      }
+    },
+    "platforms": ["android"]
+  }
+}
