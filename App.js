@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+<Image source={ICONS_MAP[item.symbol]} style={styles.icon} />
 import {
   View,
   Text,
