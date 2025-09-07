@@ -1,3 +1,4 @@
+
 import React, { useEffect, useMemo, useState } from "react";
 import {
   View, Text, StyleSheet, FlatList, TouchableOpacity, TextInput,
@@ -165,38 +166,7 @@ export default function App() {
     );
   };
 
-  const MarketRow = ({ sym }) => {
-    const meta = COIN_META[sym];
-    const m = market[sym];
-    const change =
-      period === "24h" ? m?.chg24 :
-      period === "7d"  ? m?.chg7d :
-                         m?.chg30d;
-
-    return (
-      <View style={styles.row}>
-        <View style={styles.rowLeft}>
-          <Image source={meta.icon} style={styles.iconImg} />
-          <View style={{ marginLeft: 10, minWidth: 64 }}>
-            <Text style={styles.rowTitle} numberOfLines={1}>{sym}</Text>
-            <Text style={styles.rowSub} numberOfLines={1}>{meta.name}</Text>
-          </View>
-        </View>
-
-        <View style={styles.priceBlock}>
-          <Text style={styles.priceNow} numberOfLines={1}>
-            {m ? fmtUSD(m.usd) : "—"}
-          </Text>
-          <Text style={styles.priceRub} numberOfLines={1}>
-            {m ? fmtRUB(m.rub) : "—"}
-          </Text>
-          <PLabel val={change} />
-        </View>
-      </View>
-    );
-  };
-
-  /* ======== RENDER ======== */
+  ======= RENDER ======== */
   const topPad = Platform.OS === "android" ? (StatusBar.currentHeight || 0) : 0;
 
   return (
