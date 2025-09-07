@@ -1,6 +1,7 @@
 {
-  "name": "portfel",
+  "name": "coinbox",
   "version": "1.0.0",
+  "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -12,6 +13,7 @@
     "expo": "~51.0.0",
     "react": "18.2.0",
     "react-native": "0.74.5",
-    "@react-native-async-storage/async-storage": "1.23.1"
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "expo-linear-gradient": "~13.0.2"
   }
 }
