@@ -80,26 +80,7 @@ export default function App() {
     })();
   }, []);
   useEffect(() => { AsyncStorage.setItem(STORE_KEY, JSON.stringify(items)).catch(() => {}); }, [items]);
-  useEffect(() => { AsyncStorage.setItem(STORE_SETTINGS, JSON.stringify(settings)).catch(() => {}); }, [settings]);
-
-  /* ======== USD/RUB (MOEX -> CBR -> EXH) with cache ======== */
-  async function getUsdRubFrom(source) {
-    if (source === "moex") {
-      const u = "https://iss.moex.com/iss/engines/currency/markets/selt/boards/CETS/securities/USD000UTSTOM.json?iss.meta=off&iss.only=marketdata&marketdata.columns=LAST";
-      const r = await fetchWithTimeout(u);
-      const j = await r.json();
-      return Number(j?.marketdata?.data?.[0]?.[0]);
-    }
-    if (source === "cbr") {
-      const r = await fetchWithTimeout("https://www.cbr-xml-daily.ru/daily_json.js");
-      const j = await r.json();
-      return Number(j?.Valute?.USD?.Value);
-    }
-    // exchangerate.host
-    const r = await fetchWithTimeout("https://api.exchangerate.host/latest?base=USD&symbols=RUB");
-    const j = await r.json();
-    return Number(j?.rates?.RUB);
-  }
+  useEffect(() => { AsyncStorage.setItem(STORE_SETTINGS, JSON.stringify(settings)).catch(() => {}); }, [settings]) 
 
   async function fetchUsdRub() {
     let v = null;
